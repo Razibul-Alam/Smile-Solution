@@ -1,7 +1,6 @@
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './Components/Header/Header';
-// import myDatabase from './My-database/myDatabase.json'
 import {
   BrowserRouter as Router,
   Switch,
@@ -17,13 +16,14 @@ import AdminPage from './Components/Admin-Page/AdminPage';
 import Login from './Components/LoginPage/Login';
 import PrivateRoute from './Components/Private-Route/PrivateRoute';
 import ServiceDetails from './Components/Service-Page/ServiceDetails';
+import { useEffect } from 'react';
 
 
 // cotext create context
 export const AuthContext=createContext()
 function App() {
   const[user,setUser]=useState({})
-  
+
   return (
     <AuthContext.Provider value={[user,setUser]}>
     <Router>

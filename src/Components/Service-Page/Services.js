@@ -1,16 +1,20 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState,useEffect } from 'react';
 import { FormControl, InputGroup } from 'react-bootstrap';
-import { coursesContext } from '../../App';
 import SingleService from './SingleService';
-// import dentalServices from '../../FakeData/FakeData.json';
+
 
 const Services = () => {
-    // console.log(dentalServices)
+    const[dentalServices,setDentalServices]=useState([])
+    useEffect(()=>{
+        fetch('./FakeData.JSON')
+        .then(res=>res.json())
+        .then(data=>setDentalServices(data))
+          },[])
     return (
         <>
-        {/* <div className='row'>
+        <div className='row'>
        {dentalServices.map(service=><SingleService key={service.id} service={service}/>)}
-       </div> */}
+       </div>
         </>
     );
 };
