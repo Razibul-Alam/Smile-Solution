@@ -1,4 +1,0 @@
-1. displayname in header and login logOut toggle
-2. Readme file editing
-3. Login page design
-4. extra page add
