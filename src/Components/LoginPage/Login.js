@@ -1,6 +1,5 @@
 import React, { useContext, useState } from 'react';
 import { Button, Form, NavLink } from 'react-bootstrap';
-import useFirebase from '../../Hooks/useFirebase';
 import {useHistory} from 'react-router-dom'
 import useAuth from './../../Hooks/useAuth';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -63,7 +62,6 @@ const createAccount=(e)=>{
       signInWithEmailAndPassword(auth,email,password)
   .then((userCredential) => {
     const user = userCredential.user;
-    console.log(user)
     history.push('/')
     
   })
@@ -73,7 +71,6 @@ const createAccount=(e)=>{
 
     return (
       <>
-      {user?.email?<p>{user.email}</p>:''}
       <div className="mt-5 d-flex justify-content-center row">
       <div className="col-lg-6 col-md-6 col-sm-8 mx-2" >
       

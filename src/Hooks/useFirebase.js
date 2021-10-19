@@ -1,23 +1,26 @@
 import { initializeApp } from "firebase/app";
-import { GoogleAuthProvider,getAuth, signInWithPopup,GithubAuthProvider,createUserWithEmailAndPassword,signInWithEmailAndPassword,signOut ,onAuthStateChanged,updateProfile } from "firebase/auth";
+import { GoogleAuthProvider,getAuth, signInWithPopup,createUserWithEmailAndPassword,signInWithEmailAndPassword,signOut ,onAuthStateChanged,updateProfile } from "firebase/auth";
 import {useEffect,useState } from "react";
 import { firebaseConfig } from "../Firebase-Config/FirebaseConfig";
+import {useHistory} from 'react-router-dom'
 
 const provider = new GoogleAuthProvider();
-const githubProvider = new GithubAuthProvider();
 const firebaseApp =initializeApp(firebaseConfig);
 const auth = getAuth(firebaseApp);
 const useFirebase=()=>{
   const[user,setUser]=useState([])
   const[isLoading,setIsLoading]=useState(true);
 // google login
+const history=useHistory()
 const logIn=()=>{
+  
   setIsLoading(true)
     signInWithPopup(auth, provider)
       .then((result) => {
         const user = result.user;
         console.log(user)
         setUser(user)
+        history.push('/')
       }).catch((error) => {
         const errorMessage = error.message;
       })
@@ -25,14 +28,7 @@ const logIn=()=>{
       
         }
         
-         // github login
-    const githubLogin=()=>{
-        signInWithPopup(auth, githubProvider)
-    .then((result) => {
-      const user = result.user;
-      console.log(user)
-    })
-      }
+
     //   auth identity
      useEffect(()=>{
       const unsubscrived=onAuthStateChanged(auth, (user) => {
@@ -59,6 +55,6 @@ const logOut=()=>{
   
 }
          
-        return {logIn,user,setUser,githubLogin,logOut,auth,createUserWithEmailAndPassword,signInWithEmailAndPassword,isLoading,updateProfile}
+        return {logIn,user,setUser,logOut,auth,createUserWithEmailAndPassword,signInWithEmailAndPassword,isLoading,updateProfile}
 }
 export default useFirebase;
