@@ -8,7 +8,7 @@ const AllAppointments= () => {
       <>
     <Appointment info={info} setInfo={setInfo}/>
     <hr />
-    <h3 className='text-center mt-4 text-danger'> Total Students {info.length}</h3>
+    <h3 className='text-center mt-4 text-danger'> Total appointment {info.length}</h3>
         <div className='container'>
         <Table striped bordered hover size="sm" className="mt-3">
   <thead>

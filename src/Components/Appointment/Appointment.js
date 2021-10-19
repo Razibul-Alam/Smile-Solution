@@ -36,7 +36,7 @@ setService(e.target.value)
       <div className="mt-5 d-flex justify-content-center row">
       <div className="col-lg-6 col-md-6 col-sm-8 mx-2" >
         <Form className="mt-5">
-        <h2 className="text-primary mb-3">Add Student</h2>
+        <h2 className="text-primary mb-3">Create Appointment</h2>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Control type="number" onBlur={getDate} placeholder="date" required="required" />
           <Form.Control type="Text" className='mt-3' onBlur={getName} placeholder={user?.displayName}required="required" />
