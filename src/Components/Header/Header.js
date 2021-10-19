@@ -21,7 +21,6 @@ const Header = () => {
         <Navbar.Collapse id="responsive-navbar-nav">
       <Nav className="ms-auto fw-bolder mt-2">
            <Nav.Link as={Link}  to='/home' className="me-3 my-link">Home</Nav.Link>
-           <Nav.Link as={Link}  to='/about' className="me-3 my-link">About</Nav.Link>
            <Nav.Link as={Link}  to='/appointment' className="me-3 my-link">Appointment</Nav.Link>
            <Nav.Link as={Link}  to='/services' className="me-3 my-link">services</Nav.Link>
            {user?.email&&<Nav.Link className="me-3 my-link">{user?.displayName}</Nav.Link>}
