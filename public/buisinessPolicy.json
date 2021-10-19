@@ -1,0 +1,20 @@
+[
+    {"id":1,
+       "title":"Opening hours",
+       "desc":"9:00 am-10:00 pm",
+    "img":"https://freesvg.org/img/clock-wall.png"
+
+    },
+    {"id":2,
+       "title":"Location",
+       "desc":"Uttara,Dhaka",
+    "img":"https://freesvg.org/img/map-pin.png"
+
+    },
+    {"id":3,
+       "title":"Call Us",
+       "desc":"023455667",
+    "img":"https://freesvg.org/img/Anonymous_Phone_Icon.png"
+
+    }
+]

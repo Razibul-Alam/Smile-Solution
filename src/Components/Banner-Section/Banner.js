@@ -3,7 +3,7 @@ import React from 'react';
 
 const Banner = () => {
     return (
-        <main style={{height:'600px'}} className="row d-flex align-items-center">
+        <main style={{height:'600px'}} className="row d-flex align-items-center bg-dark text-light">
             <div className="col-md-4 offset-md-1">
                 <h1 style={{color: '#3A4256'}}>Your New Smile <br/> Starts Here</h1>
                 <p className="text-secondary">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore eveniet necessitatibus et iusto corrupti minima.</p>

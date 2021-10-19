@@ -8,7 +8,7 @@ import {
   Link,
   NavLink
 } from "react-router-dom";
-import { createContext, useState } from 'react';
+import {useState } from 'react';
 import Home from './Components/Header/HomePage/Home';
 import NotFound from './Components/Header/Not-Found/NotFound';
 import Services from './Components/Service-Page/Services';
@@ -16,28 +16,31 @@ import AdminPage from './Components/Admin-Page/AdminPage';
 import Login from './Components/LoginPage/Login';
 import PrivateRoute from './Components/Private-Route/PrivateRoute';
 import ServiceDetails from './Components/Service-Page/ServiceDetails';
-import { useEffect } from 'react';
-
+import AuthProvider from './Components/AuthProvider/AuthProvider'
+import AllAppointments from './Components/Appointment/AllAppointmets';
 
 // cotext create context
-export const AuthContext=createContext()
+
 function App() {
   const[user,setUser]=useState({})
 
   return (
-    <AuthContext.Provider value={[user,setUser]}>
+    <AuthProvider>
     <Router>
     <Header/>
      <Switch>
      <Route exact path="/home">
     <Home/>
      </Route>
-     <Route exact path="/service">
+     <PrivateRoute exact path="/services">
     <Services/>
-     </Route>
-     <Route exact path="/service/:servicekey">
+     </PrivateRoute>
+     <PrivateRoute exact path="/appointment">
+    <AllAppointments/>
+     </PrivateRoute>
+     <PrivateRoute exact path="/service/:servicekey">
     <ServiceDetails/>
-     </Route>
+     </PrivateRoute>
      <Route exact path="/login">
     <Login/>
      </Route>
@@ -52,7 +55,8 @@ function App() {
      </Route>
      </Switch>
     </Router>
-    </AuthContext.Provider>
+    </AuthProvider>
+    
   );
 }
 

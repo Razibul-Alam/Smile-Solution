@@ -8,15 +8,15 @@ const Footer = () => {
     return (
         <footer className="row justify-content-between my-footer align-items-center mt-5 text-center bg-light">
         <div className="col-lg-4 mb-2">
-          <h5>Our Principles</h5>
+          <h5>Our Services</h5>
           <hr className='w-50 m-auto'/>
-         <Link to='/'><p>Prominent</p></Link>
-         <Link to='/'><p>Badger</p></Link>
-         <Link to='/'><p>Ingersoll Rand</p></Link> 
+         <Link to='/'><p>Filling</p></Link>
+         <Link to='/'><p>Extraction</p></Link>
+         <Link to='/'><p>Scalling</p></Link> 
         </div>
         <div className="col-lg-4">
-          <h5>SmartFluidtech</h5>
-          <p>Email:SmartFluidtech@gmail.com</p>
+          <h5>Smile Solutions</h5>
+          <p>Email:Smilesolution@gmail.com</p>
           <p>Dhaka, bangladesh</p>
         </div>
         <div className="col-lg-4 mb-2">
@@ -24,7 +24,7 @@ const Footer = () => {
           <span className="fs-2 mx-2"><FontAwesomeIcon icon={faGithubSquare} /></span>
           <span className="fs-2 mx-2"><FontAwesomeIcon icon={faYoutubeSquare} /></span>
           <span className="fs-2 mx-2"><FontAwesomeIcon icon={faTwitterSquare} /></span>
-          <p>Smart Fluidtech<span className="fs-6"><FontAwesomeIcon icon={faCopyright}/></span> AllRight reserve</p>
+          <p>Smile Solution<span className="fs-6"><FontAwesomeIcon icon={faCopyright}/></span> AllRight reserve</p>
         </div>
       </footer>
     );

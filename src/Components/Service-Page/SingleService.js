@@ -10,7 +10,7 @@ const SingleService= ({service}) => {
           <Card.Img variant="top" src={img} />
           <Card.Body>
             <Card.Title>{name}</Card.Title>
-            <Link to ={`/service/${id}`}><Button variant="primary">Appointment</Button></Link>
+            <Link to ={`/service/${id}`}><Button variant="primary">Details</Button></Link>
           </Card.Body>
         </Card>
       </CardGroup>

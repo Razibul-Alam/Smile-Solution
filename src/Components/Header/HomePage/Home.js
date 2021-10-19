@@ -3,6 +3,9 @@ import Services from '../../Service-Page/Services';
 import Banner from './../../Banner-Section/Banner';
 import Footer from './../../Footer-Section/Footer';
 import { useEffect } from 'react';
+import Reviews from '../../Reviews/Reviews';
+import BuisinessPolicies from '../../Buisness-policy/BuisinessPolicies';
+
 
 
 const Home = () => {
@@ -11,7 +14,9 @@ const Home = () => {
     return (
         <>
         <Banner/>
+        <BuisinessPolicies/>
         <Services/>
+        <Reviews/>
         <Footer/>
         </>
     );

@@ -5,28 +5,28 @@
         "img":"https://j758s1irpz926ddw14fjwet1-wpengine.netdna-ssl.com/wp-content/uploads/2016/11/treatment3.jpg"
     },
     {
-        "name":"Teeth Filling",
+        "name":"Teeth Polishing",
         "id":2,
         "img":"https://j758s1irpz926ddw14fjwet1-wpengine.netdna-ssl.com/wp-content/uploads/2016/11/treatment1.jpg"
     },
     {
-        "name":"Teeth Filling",
+        "name":"Teeth Scalling",
         "id":3,
         "img":"https://j758s1irpz926ddw14fjwet1-wpengine.netdna-ssl.com/wp-content/uploads/2016/11/treatment2.jpg"
     },
     {
-        "name":"Teeth Filling",
+        "name":"Extraction",
         "id":4,
-        "img":"https://j758s1irpz926ddw14fjwet1-wpengine.netdna-ssl.com/wp-content/uploads/2016/11/treatment2.jpg"
+        "img":"https://donto-react.netlify.app/static/media/g2.feb14bd6.jpg"
     },
     {
-        "name":"Teeth Filling",
+        "name":"Carige Remove",
         "id":5,
-        "img":"https://j758s1irpz926ddw14fjwet1-wpengine.netdna-ssl.com/wp-content/uploads/2016/11/treatment2.jpg"
+        "img":"https://donto-react.netlify.app/static/media/g1.771170bd.jpg"
     },
     {
-        "name":"Teeth Filling",
+        "name":"sensivity Cure",
         "id":6,
-        "img":"https://j758s1irpz926ddw14fjwet1-wpengine.netdna-ssl.com/wp-content/uploads/2016/11/treatment2.jpg"
+        "img":"https://donto-react.netlify.app/static/media/g3.e4b218cb.jpg"
     }
 ]
