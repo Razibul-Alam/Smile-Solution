@@ -23,8 +23,8 @@ const questionAndAns=[
 const AllQuestionAndAns = () => {
     return (
         <>
-        <h2 className='text-center text-primary mb-3'>Get some answers from your doctor</h2>
-        <div className='container'>
+        <h2 className='text-center text-primary mb-5'>Ask Something</h2>
+        <div className='container mb-3 shadow'>
 
             <Accordion defaultActiveKey="0" flush>
             {questionAndAns?.map(faq=><QuestionAns key={faq.id} faq={faq}/>)}

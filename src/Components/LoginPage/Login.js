@@ -1,6 +1,6 @@
-import React, { useContext, useState } from 'react';
-import { Button, Form, NavLink, Alert } from 'react-bootstrap';
-import {useHistory,useLocation} from 'react-router';
+import React, { useState } from 'react';
+import { Button, Form, Alert } from 'react-bootstrap';
+import {useHistory} from 'react-router';
 import useAuth from './../../Hooks/useAuth';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGoogle } from '@fortawesome/free-brands-svg-icons';
@@ -10,8 +10,7 @@ import { faGoogle } from '@fortawesome/free-brands-svg-icons';
 const Login = () => {
   const[show,setShow]=useState(false);
   const history=useHistory()
-  const location = useLocation();
-  const {logIn,user,setUser,githubLogin,logOut,auth,createUserWithEmailAndPassword,signInWithEmailAndPassword,updateProfile,error,setError}=useAuth();
+  const {logIn,user,auth,createUserWithEmailAndPassword,signInWithEmailAndPassword,updateProfile,error,setError}=useAuth();
   
   const[email,setEmail]=useState('')
   const[password,setPassword]=useState('')
@@ -86,8 +85,8 @@ const createAccount=(e)=>{
       {error&&<Alert variant="danger">
     {error} <Button onClick={()=>setError('')} className='ms-5 text-danger'>close</Button>
   </Alert>}
-         { (!show&& !user?.email)?<div>
-            <Form onSubmit={createAccount}>
+         { (!show&& !user?.email)?<div className='shadow p-5'>
+            <Form onSubmit={createAccount} >
             <Form.Control  type="text" placeholder="Name" onBlur={getName} />
   <br />
   <Form.Control type="email" placeholder="Email" onBlur={getEmail}  />
@@ -100,7 +99,7 @@ const createAccount=(e)=>{
            <span> Already have an Account ?</span> <span className='text-danger' onClick={()=>setShow(true)}> SignIn</span>
            </div>
           </div>:
-          <div>
+          <div className='p-5 shadow'>
             <Form onSubmit={signInAccount}>
   <Form.Control type="email" placeholder="Email" onBlur={getEmail} />
   <br />
@@ -111,7 +110,7 @@ const createAccount=(e)=>{
           </div>}
           <Button variant="primary" 
    className="form-control mt-3" onClick = {logIn}>
-    <span className="text-danger fs-4 me-2"><FontAwesomeIcon icon={faGoogle} /></span>Login With Google
+    <span className="text-danger fs-5 me-2"><FontAwesomeIcon icon={faGoogle} /></span>Login With Google
   </Button>
         </div>
         </div>

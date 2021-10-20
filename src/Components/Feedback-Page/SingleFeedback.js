@@ -2,7 +2,7 @@ import React from 'react';
 import {Card } from 'react-bootstrap';
 
 const SingleFeedback =({feedback})=> {
-    const{id,name,img,qoute}=feedback;
+    const{name,img,qoute}=feedback;
     return (
         <Card>
         <Card.Header>

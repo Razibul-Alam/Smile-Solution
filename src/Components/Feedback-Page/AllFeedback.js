@@ -10,7 +10,10 @@ const AllFeedback = () => {
           },[])
     return (
         <>
-        <h2 className='text-center my-5'>What patient says</h2>
+        <div className='my-5'>
+        <h2 className='text-center text-success'>What patient says</h2>
+        <hr className='m-auto text-primary w-25'/>
+        </div>
         <div className='container'>
             {feedbacks?.map(feedback=><SingleFeedback key={feedback.id} feedback={feedback} />)}
         </div>

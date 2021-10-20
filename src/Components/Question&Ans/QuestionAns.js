@@ -3,7 +3,6 @@ import { Accordion } from 'react-bootstrap';
 
 const QuestionAns = ({faq}) => {
   const{question,ans,id}=faq;
-  console.log(faq)
     return (
         <div>
         

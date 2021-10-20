@@ -1,5 +1,5 @@
 import React from 'react';
-import { Carousel, Card } from 'react-bootstrap';
+import { Carousel} from 'react-bootstrap';
 import SingleDoctor from './SingleDoctor';
 
 const MyDoctors = () => {

@@ -1,5 +1,5 @@
-import React, { useState,useEffect } from 'react';
-import { Table, Button } from 'react-bootstrap';
+import React, { useState} from 'react';
+import { Table} from 'react-bootstrap';
 import Appointment from './Appointment';
 import useAuth from './../../Hooks/useAuth';
 
@@ -12,7 +12,7 @@ const AllAppointments= () => {
     <hr />
     <h3 className='text-center mt-4 text-danger'> Total appointment {info.length}</h3>
         <div className='container'>
-        <Table striped bordered hover size="sm" className="mt-3">
+        <Table striped responsive bordered hover size="sm" className="mt-3">
   <thead>
     <tr>
       <th>date</th>

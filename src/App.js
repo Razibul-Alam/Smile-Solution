@@ -5,10 +5,7 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link,
-  NavLink
 } from "react-router-dom";
-import {useState } from 'react';
 import Home from './Components/Header/HomePage/Home';
 import NotFound from './Components/Header/Not-Found/NotFound';
 import AdminPage from './Components/Admin-Page/AdminPage';
@@ -19,12 +16,7 @@ import AuthProvider from './Components/AuthProvider/AuthProvider'
 import AllAppointments from './Components/Appointment/AllAppointmets';
 import Doctors from './Components/Doctors/Doctors';
 import Footer from './Components/Footer-Section/Footer';
-
-// cotext create context
-
 function App() {
-  const[user,setUser]=useState({})
-
   return (
     <AuthProvider>
     <Router>

@@ -33,10 +33,10 @@ setService(e.target.value)
     }
     return (
         <>
-      <div className="mt-5 d-flex justify-content-center row">
-      <div className="col-lg-6 col-md-6 col-sm-8 mx-2" >
-        <Form className="mt-5">
-        <h2 className="text-primary mb-3">Create Appointment</h2>
+      <div className="my-5 d-flex justify-content-center row">
+      <h2 className="text-primary text-center">Create Appointment</h2>
+      <div className="col-lg-6 col-md-6 col-sm-8 mx-2 " >
+        <Form className="mt-4 shadow p-5">
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Control type="text" onBlur={getDate} placeholder={new Date().toLocaleDateString()} required="required" />
           <Form.Control type="Text" className='mt-3' onBlur={getName} placeholder={user?.displayName}required="required" />

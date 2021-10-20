@@ -9,8 +9,6 @@ useEffect(()=>{
   .then(res=>res.json())
   .then(data=>setServices(data))
     },[])
-  
-console.log(services)
     const{servicekey}=useParams()
     const singleDetails=services?.find(service=>service.id==servicekey)
     return (
@@ -19,7 +17,8 @@ console.log(services)
           <Card.Img variant="top" src={singleDetails?.img} />
           <Card.Body>
             <Card.Title>{singleDetails?.name}</Card.Title>
-            <Link to ={`/appointment/${singleDetails?.id}`}><Button variant="primary">Appointment</Button></Link>
+            <p>{singleDetails?.desc}</p>
+            <Link to ="/appointment"><Button variant="primary">Appointment</Button></Link>
           </Card.Body>
         </Card>
         </div>

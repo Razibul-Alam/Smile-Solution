@@ -1,14 +1,14 @@
-import { faStar } from '@fortawesome/free-regular-svg-icons';
+
 import React from 'react';
 import { Card } from 'react-bootstrap';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Link } from 'react-router-dom';
 
 const SingleDoctor = () => {
     return (
         <div className='d-flex justify-content-center my-5'>
-            <Card style={{ width: '26rem' }}>
+            <Card style={{ width: '28rem' }}>
             <Card.Title>Dr.Smith</Card.Title>
-          <small>10 Years of Experience</small>
+          <small>Expert</small>
        <div className='rounded'>
        <Card.Img variant="top" src="http://denticare.bold-themes.com/allen/wp-content/uploads/sites/16/2020/01/people-01.jpg" className='img-fluid' />
        </div>
@@ -18,7 +18,7 @@ const SingleDoctor = () => {
           </Card.Text>
 
         </Card.Body>
-        <button className="btn btn-primary">Take Appointment</button>
+        <Link to ="/appointment" className='m-auto'><button className="btn btn-primary m-auto mb-3">Take Appointment</button></Link>
       </Card>
         </div>
     );

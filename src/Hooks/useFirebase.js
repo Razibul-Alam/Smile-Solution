@@ -2,8 +2,6 @@ import { initializeApp } from "firebase/app";
 import { GoogleAuthProvider,getAuth, signInWithPopup,createUserWithEmailAndPassword,signInWithEmailAndPassword,signOut ,onAuthStateChanged,updateProfile } from "firebase/auth";
 import {useEffect,useState } from "react";
 import { firebaseConfig } from "../Firebase-Config/FirebaseConfig";
-import {useHistory} from 'react-router-dom'
-
 const provider = new GoogleAuthProvider();
 const firebaseApp =initializeApp(firebaseConfig);
 const auth = getAuth(firebaseApp);
@@ -12,14 +10,12 @@ const useFirebase=()=>{
   const[error,setError]=useState('')
   const[isLoading,setIsLoading]=useState(true);
 // google login
-const history=useHistory()
 const logIn=()=>{
   
   setIsLoading(true)
     signInWithPopup(auth, provider)
       .then((result) => {
         const user = result.user;
-        console.log(user)
         setUser(user)
       }).catch((error) => {
         const errorMessage = error.message;

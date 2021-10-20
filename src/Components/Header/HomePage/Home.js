@@ -4,10 +4,7 @@ import Banner from './../../Banner-Section/Banner';
 import BuisinessPolicies from '../../Buisness-policy/BuisinessPolicies';
 import AllFeedback from '../../Feedback-Page/AllFeedback';
 
-
-
 const Home = () => {
-    console.log('hello')
     
     return (
         <>

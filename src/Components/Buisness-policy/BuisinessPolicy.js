@@ -4,7 +4,7 @@ const BuisinessPolicy = ({policy}) => {
     const{title,img,desc}=policy;
     return (
        
-        <div className="card1 col-md-3 bg-primary rounded mx-4">
+        <div className="card1 col-md-3 p-3 rounded mx-4 shadow-lg">
             <div className='d-flex w-75 align-items-center '>
                 <div>
                     <img className='img-fluid' src={img} alt="" />

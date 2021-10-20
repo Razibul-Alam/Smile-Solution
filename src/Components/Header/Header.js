@@ -1,22 +1,15 @@
-import React,{useState} from 'react';
-import { Container, Nav, Navbar, Button } from 'react-bootstrap';
+
+import React from 'react';
+import { Nav, Navbar} from 'react-bootstrap';
 import useAuth from './../../Hooks/useAuth';
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link,
-    NavLink
-  } from "react-router-dom";
+import {Link} from "react-router-dom";
 const Header = () => {
   const{logOut,user}=useAuth()
-  const [show, setShow] = useState(false);
-  const handleShow = () => setShow(true);
     return (
       <>
         <Navbar collapseOnSelect expand="lg" bg="light py-3" variant="light">
         
-        <Navbar.Brand href="#home" className='text-danger fw-bolder'>SMILE SOLUTION</Navbar.Brand>
+        <Navbar.Brand href="#home" className='text-danger fw-bolder'>SMILE SOLUTION </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
       <Nav className="ms-auto fw-bolder mt-2">
