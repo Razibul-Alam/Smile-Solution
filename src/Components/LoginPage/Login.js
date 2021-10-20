@@ -1,15 +1,17 @@
 import React, { useContext, useState } from 'react';
-import { Button, Form, NavLink } from 'react-bootstrap';
-import {useHistory} from 'react-router-dom'
+import { Button, Form, NavLink, Alert } from 'react-bootstrap';
+import {useHistory,useLocation} from 'react-router';
 import useAuth from './../../Hooks/useAuth';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGoogle } from '@fortawesome/free-brands-svg-icons';
 
 
+
 const Login = () => {
   const[show,setShow]=useState(false);
   const history=useHistory()
-  const {logIn,user,setUser,githubLogin,logOut,auth,createUserWithEmailAndPassword,signInWithEmailAndPassword,updateProfile}=useAuth();
+  const location = useLocation();
+  const {logIn,user,setUser,githubLogin,logOut,auth,createUserWithEmailAndPassword,signInWithEmailAndPassword,updateProfile,error,setError}=useAuth();
   
   const[email,setEmail]=useState('')
   const[password,setPassword]=useState('')
@@ -39,8 +41,8 @@ setPassword(e.target.value)
       // Profile updated!
       // ...
     }).catch((error) => {
-      // An error occurred
-      // ...
+      const errorMessage = error.message;
+        setError(errorMessage)
     });
     }
 
@@ -49,8 +51,13 @@ const createAccount=(e)=>{
   e.preventDefault()
   createUserWithEmailAndPassword(auth,email,password)
 .then((userCredential) => {
+  const user = userCredential.user;
   setUserProfile()
-})
+  window.location.reload(false)
+}).catch((error) => {
+  const errorMessage = error.message;
+        setError(errorMessage)
+});
 }
 
 
@@ -62,9 +69,12 @@ const createAccount=(e)=>{
       signInWithEmailAndPassword(auth,email,password)
   .then((userCredential) => {
     const user = userCredential.user;
-    history.push('/')
+    history.Push('/')
     
-  })
+  }).catch((error) => {
+    const errorMessage = error.message;
+          setError(errorMessage)
+  });
 
     }
 
@@ -73,9 +83,10 @@ const createAccount=(e)=>{
       <>
       <div className="mt-5 d-flex justify-content-center row">
       <div className="col-lg-6 col-md-6 col-sm-8 mx-2" >
-      
-          
-         { !show?<div>
+      {error&&<Alert variant="danger">
+    {error} <Button onClick={()=>setError('')} className='ms-5 text-danger'>close</Button>
+  </Alert>}
+         { (!show&& !user?.email)?<div>
             <Form onSubmit={createAccount}>
             <Form.Control  type="text" placeholder="Name" onBlur={getName} />
   <br />

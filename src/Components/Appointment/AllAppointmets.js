@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import { Table, Button } from 'react-bootstrap';
 import Appointment from './Appointment';
+import useAuth from './../../Hooks/useAuth';
 
 const AllAppointments= () => {
-    const [info,setInfo]=useState([{date:'19-10-2021',name:'mark',email:'mark1232@gmail.com',service:'Extraction'}])
+  const{user}=useAuth()
+    const [info,setInfo]=useState([{date:new Date().toLocaleDateString(),name:user?.displayName,email:user?.email,service:'dental'}])
     return (
       <>
     <Appointment info={info} setInfo={setInfo}/>

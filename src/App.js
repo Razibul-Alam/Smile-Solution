@@ -18,6 +18,7 @@ import ServiceDetails from './Components/Service-Page/ServiceDetails';
 import AuthProvider from './Components/AuthProvider/AuthProvider'
 import AllAppointments from './Components/Appointment/AllAppointmets';
 import Doctors from './Components/Doctors/Doctors';
+import Footer from './Components/Footer-Section/Footer';
 
 // cotext create context
 
@@ -38,6 +39,9 @@ function App() {
      <PrivateRoute exact path="/appointment">
     <AllAppointments/>
      </PrivateRoute>
+     <PrivateRoute exact path="/appointment/:appointkey">
+    <AllAppointments/>
+     </PrivateRoute>
      <PrivateRoute exact path="/service/:servicekey">
     <ServiceDetails/>
      </PrivateRoute>
@@ -54,6 +58,7 @@ function App() {
     <NotFound/>
      </Route>
      </Switch>
+     <Footer/>
     </Router>
     </AuthProvider>
     

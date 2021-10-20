@@ -22,11 +22,15 @@ const questionAndAns=[
 
 const AllQuestionAndAns = () => {
     return (
+        <>
+        <h2 className='text-center text-primary mb-3'>Get some answers from your doctor</h2>
         <div className='container'>
+
             <Accordion defaultActiveKey="0" flush>
             {questionAndAns?.map(faq=><QuestionAns key={faq.id} faq={faq}/>)}
             </Accordion>
         </div>
+        </>
     );
 };
 

@@ -1,11 +1,11 @@
 import React from 'react';
-import Reviews from './../Reviews/Reviews';
 import AllQuestionAndAns from './../Question&Ans/AllQuestionAndAns';
+import MyDoctors from '../AllDoctors/MyDoctors';
 
 const Doctors = () => {
     return (
         <div>
-            <Reviews/>
+            <MyDoctors/>
             <AllQuestionAndAns/>
         </div>
     );

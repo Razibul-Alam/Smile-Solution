@@ -3,7 +3,7 @@ import React from 'react';
 import { Card } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-const SingleReviews = () => {
+const SingleDoctor = () => {
     return (
         <div className='d-flex justify-content-center my-5'>
             <Card style={{ width: '26rem' }}>
@@ -24,4 +24,4 @@ const SingleReviews = () => {
     );
 };
 
-export default SingleReviews;
+export default SingleDoctor;

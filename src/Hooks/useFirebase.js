@@ -9,6 +9,7 @@ const firebaseApp =initializeApp(firebaseConfig);
 const auth = getAuth(firebaseApp);
 const useFirebase=()=>{
   const[user,setUser]=useState([])
+  const[error,setError]=useState('')
   const[isLoading,setIsLoading]=useState(true);
 // google login
 const history=useHistory()
@@ -20,9 +21,9 @@ const logIn=()=>{
         const user = result.user;
         console.log(user)
         setUser(user)
-        history.push('/')
       }).catch((error) => {
         const errorMessage = error.message;
+        setError(errorMessage)
       })
       .finally(()=>setIsLoading(false))
       
@@ -54,6 +55,6 @@ const logOut=()=>{
   
 }
          
-        return {logIn,user,setUser,logOut,auth,createUserWithEmailAndPassword,signInWithEmailAndPassword,isLoading,updateProfile}
+        return {logIn,user,setUser,logOut,auth,createUserWithEmailAndPassword,signInWithEmailAndPassword,isLoading,updateProfile,error,setError}
 }
 export default useFirebase;

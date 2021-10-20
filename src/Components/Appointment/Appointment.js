@@ -38,7 +38,7 @@ setService(e.target.value)
         <Form className="mt-5">
         <h2 className="text-primary mb-3">Create Appointment</h2>
         <Form.Group className="mb-3" controlId="formBasicEmail">
-          <Form.Control type="number" onBlur={getDate} placeholder="date" required="required" />
+          <Form.Control type="text" onBlur={getDate} placeholder={new Date().toLocaleDateString()} required="required" />
           <Form.Control type="Text" className='mt-3' onBlur={getName} placeholder={user?.displayName}required="required" />
         </Form.Group>
         <Form.Group className="mb-3" controlId="formBasicEmail">

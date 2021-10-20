@@ -1,6 +1,7 @@
 import React, { useState,useEffect  } from 'react';
 import { useParams } from 'react-router';
-import { Card } from 'react-bootstrap';
+import { Card, Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 const ServiceDetails = () => {
 const[services,setServices]=useState([])
 useEffect(()=>{
@@ -18,6 +19,7 @@ console.log(services)
           <Card.Img variant="top" src={singleDetails?.img} />
           <Card.Body>
             <Card.Title>{singleDetails?.name}</Card.Title>
+            <Link to ={`/appointment/${singleDetails?.id}`}><Button variant="primary">Appointment</Button></Link>
           </Card.Body>
         </Card>
         </div>
