@@ -9,7 +9,7 @@ fetch('./buisinessPolicy.json')
 .then(data=>setPolicies(data))
     },[])
     return (
-        <section className="row justify-content-center mt-5">
+        <section className="row justify-content-center g-4 mt-5">
          {policies?.map(policy=><BuisinessPolicy key={policy.id} policy={policy}/>)}   
         </section>
     );

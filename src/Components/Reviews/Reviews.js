@@ -5,8 +5,8 @@ import SingleReviews from './SingleReviews';
 const Reviews = () => {
     return (
         <>
-        <h2 className='text-center text-primary mt-5'>What Patient Says</h2>
-        <Carousel variant="dark" className='my-5 bg-success'>
+        <h2 className='text-center text-primary mt-5'>Meet Your Doctor</h2>
+        <Carousel variant="dark" className='my-5 bg-dark'>
   <Carousel.Item>
   <SingleReviews/>
   </Carousel.Item>

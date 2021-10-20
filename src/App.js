@@ -11,13 +11,13 @@ import {
 import {useState } from 'react';
 import Home from './Components/Header/HomePage/Home';
 import NotFound from './Components/Header/Not-Found/NotFound';
-import Services from './Components/Service-Page/Services';
 import AdminPage from './Components/Admin-Page/AdminPage';
 import Login from './Components/LoginPage/Login';
 import PrivateRoute from './Components/Private-Route/PrivateRoute';
 import ServiceDetails from './Components/Service-Page/ServiceDetails';
 import AuthProvider from './Components/AuthProvider/AuthProvider'
 import AllAppointments from './Components/Appointment/AllAppointmets';
+import Doctors from './Components/Doctors/Doctors';
 
 // cotext create context
 
@@ -32,8 +32,8 @@ function App() {
      <Route exact path="/home">
     <Home/>
      </Route>
-     <PrivateRoute exact path="/services">
-    <Services/>
+     <PrivateRoute exact path="/doctors">
+    <Doctors/>
      </PrivateRoute>
      <PrivateRoute exact path="/appointment">
     <AllAppointments/>

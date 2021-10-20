@@ -31,7 +31,7 @@ const logIn=()=>{
 
     //   auth identity
      useEffect(()=>{
-      const unsubscrived=onAuthStateChanged(auth, (user) => {
+      onAuthStateChanged(auth, (user) => {
         if (user) {
          setUser(user)
         } else {
@@ -40,8 +40,7 @@ const logIn=()=>{
         }
         setIsLoading(false)
       });
-      return ()=>unsubscrived;
-      
+     
      },[])
         // ----
         // logout method

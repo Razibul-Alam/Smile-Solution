@@ -5,26 +5,20 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const SingleReviews = () => {
     return (
-       
         <div className='d-flex justify-content-center my-5'>
             <Card style={{ width: '26rem' }}>
+            <Card.Title>Dr.Smith</Card.Title>
+          <small>10 Years of Experience</small>
        <div className='rounded'>
        <Card.Img variant="top" src="http://denticare.bold-themes.com/allen/wp-content/uploads/sites/16/2020/01/people-01.jpg" className='img-fluid' />
        </div>
         <Card.Body className='text-center'>
-          <Card.Title>Mr.Smith</Card.Title>
           <Card.Text>
-            Some quick example text to build on the card title and make up the bulk of
-            the card's content.
+            I have a 10 Years of experience.I wanna see smile on your face.
           </Card.Text>
-          <div>
-          <span className="fs-4 mx-2"><FontAwesomeIcon icon={faStar} /></span>
-          <span className="fs-4 mx-2"><FontAwesomeIcon icon={faStar} /></span>
-          <span className="fs-4 mx-2"><FontAwesomeIcon icon={faStar} /></span>
-          <span className="fs-4 mx-2"><FontAwesomeIcon icon={faStar} /></span>
-          <span className="fs-4 mx-2"><FontAwesomeIcon icon={faStar} /></span>
-          </div>
+
         </Card.Body>
+        <button className="btn btn-primary">Take Appointment</button>
       </Card>
         </div>
     );
