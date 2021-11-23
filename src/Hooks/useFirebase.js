@@ -11,7 +11,6 @@ const useFirebase=()=>{
   const[isLoading,setIsLoading]=useState(true);
 // google login
 const logIn=()=>{
-  
   setIsLoading(true)
     signInWithPopup(auth, provider)
       .then((result) => {

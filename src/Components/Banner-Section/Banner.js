@@ -8,7 +8,7 @@ const Banner = () => {
             <div className="col-md-4 offset-md-1">
                 <h1 className='text-primary'>Your New Smile <br/> Starts Here</h1>
                 <p className="text-light">
-                    This is your one stop solution. WE can cure your pain and makeyou feel happy. We want to see your face smile
+                    This is your one stop solution. WE can cure your pain and makeyou feel happy. We want to see your face smile. Really we wanna smile on your face.
                 </p>
                 <Link to ="/appointment"><button className="btn btn-primary">GET APPOINTMENT</button></Link>
             </div>
